@@ -4,18 +4,6 @@ import { CarouselBannerItem } from '../types/gwallet';
 
 interface CarouselBannerProps {
   banners: CarouselBannerItem[];
-import React, { useEffect, useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { CarouselBannerItem } from '../types/gwallet';
-
-interface CarouselBannerProps {
-  banners: CarouselBannerItem[];
-import React, { useEffect, useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { CarouselBannerItem } from '../types/gwallet';
-
-interface CarouselBannerProps {
-  banners: CarouselBannerItem[];
   placement: 'middle' | 'end';
   onNavigateLink: (targetUrl: string) => void;
 }
