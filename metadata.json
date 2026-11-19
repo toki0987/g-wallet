@@ -1,0 +1,6 @@
+{
+  "name": "G Wallet",
+  "description": "Luxury global fintech super-app combining dual telecom & shop wallets, P2P escrow, Daraz-core Dokan marketplace, AI-assisted virtual Visa/Mastercards, regional/global community, 5-generation referrals, and Master Admin control.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
