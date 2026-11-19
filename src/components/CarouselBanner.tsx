@@ -62,4 +62,50 @@ export const CarouselBanner: React.FC<CarouselBannerProps> = ({
                   type="button"
                   onClick={() => setIndex((prev) => (prev - 1 + filtered.length) % filtered.length)}
                   aria-label="Previous slide"
-                  className="w-
+                  className="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 flex items-center justify-center cursor-pointer"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setIndex((prev) => (prev + 1) % filtered.length)}
+                  aria-label="Next slide"
+                  className="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 flex items-center justify-center cursor-pointer"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="md:col-span-5 min-h-[170px] relative bg-gradient-to-br from-[#13224A] via-[#0B142C] to-[#060D1F] flex items-center justify-center overflow-hidden">
+          {activeBanner.imageData ? (
+            <img
+              src={activeBanner.imageData}
+              alt={activeBanner.title}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="p-6 text-center relative z-10">
+              <div
+                className="w-28 h-28 rounded-full mx-auto border border-[#F5B041]/30 flex items-center justify-center"
+                style={{
+                  background:
+                    'radial-gradient(circle, rgba(245,176,65,0.22) 0%, rgba(6,13,31,0.9) 70%)',
+                }}
+              >
+                <span className="font-display text-2xl font-bold gw-gold-text">GW</span>
+              </div>
+              <p className="text-xs text-slate-400 mt-3">
+                Slide duration {(activeBanner.durationMs / 1000).toFixed(1)}s
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
