@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import {
   ArrowRight,
   CreditCard,
@@ -793,6 +794,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <GWalletApp />
+      <Analytics />
     </ErrorBoundary>
   );
 }
